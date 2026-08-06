@@ -52,10 +52,10 @@ for p in config["points"]:
 
     print(" ".join(cmd))
     
-    confirm = input("Submit this point? (y/n/q): ")
-    if confirm.lower() == "q":
-        break
-    if confirm.lower() != "y":
-        continue
+    #confirm = input("Submit this point? (y/n/q): ")
+    #if confirm.lower() == "q":
+    #    break
+    #if confirm.lower() != "y":
+    #    continue
 
     subprocess.run(cmd, check=True)

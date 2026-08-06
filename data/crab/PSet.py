@@ -11,6 +11,7 @@ process.source = cms.Source(
 
 #process.options.numberOfThreads=4
 process.options = cms.untracked.PSet(
+    #numberOfThreads = cms.untracked.uint32(1)
     numberOfThreads = cms.untracked.uint32(4)
 )
 

@@ -6,23 +6,23 @@
             "note" : "initially LHEGEN; so some dummy # taken from other request"
         },
         "RunIISummer20UL16SIM" : {
-            "prepid" : "EXO-RunIISummer20UL16SIM-05787",
+            "prepid" : "EXO-RunIISummer20UL16SIM-05827",
             "note" : ""
         },
         "RunIISummer20UL16DIGIPremix" : {
-            "prepid" : "EXO-RunIISummer20UL16DIGIPremix-06263",
+            "prepid" : "EXO-RunIISummer20UL16DIGIPremix-06303",
             "note" : ""
         },
         "RunIISummer20UL16HLT" : {
-            "prepid" : "EXO-RunIISummer20UL16HLT-06260",
+            "prepid" : "EXO-RunIISummer20UL16HLT-06300",
             "note" : ""
         },
         "RunIISummer20UL16RECO" : {
-            "prepid" : "EXO-RunIISummer20UL16RECO-06263",
+            "prepid" : "EXO-RunIISummer20UL16RECO-06303",
             "note" : ""
         },
         "RunIISummer20UL16MiniAODv2" : {
-            "prepid" : "EXO-RunIISummer20UL16MiniAODv2-06219",
+            "prepid" : "EXO-RunIISummer20UL16MiniAODv2-06259",
             "note" : ""
         }
     }

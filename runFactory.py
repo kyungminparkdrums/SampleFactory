@@ -65,6 +65,18 @@ class SubmitFactory:
             raise RuntimeError(f"Could not parse ctau from fragment name: {base}")
         return m.group(0)
 
+    """
+    def __parse_ctau(self):
+        base = os.path.basename(self.ARGS["fragment"])
+        m = re.search(r"ctau-(\d+(?:p\d+)?)", base)
+        if not m:
+            raise RuntimeError(f"Could not parse ctau from fragment name: {base}")
+
+        raw = m.group(1)          # e.g. "1", "10", "0p1"
+ 
+        return raw   
+    """
+
     def __extract_gridpack_info(self, fragment_path):
         spec = importlib.util.spec_from_file_location("fragment", fragment_path)
         module = importlib.util.module_from_spec(spec)
@@ -423,11 +435,11 @@ class SubmitFactory:
             print("\n----------------------- RUN.SH ------------------------\n")
             os.system(f"cat {self.SUBMITDIR}/run.sh")
 
-            if not self.ARGS["skip_confirm"]:
-                confirmation = input("Do you want to submit? (y/n) ")
-                if confirmation.lower()!="y":
-                    os.system(f"rm -rf {self.SUBMITDIR}")
-                    return
+            #if not self.ARGS["skip_confirm"]:
+            #    confirmation = input("Do you want to submit? (y/n) ")
+            #    if confirmation.lower()!="y":
+            #        os.system(f"rm -rf {self.SUBMITDIR}")
+            #        return
 
         else:
             os.system(f"cp {self.FACTORY}/data/crab/crab.py {self.SUBMITDIR}/")
@@ -492,7 +504,7 @@ class SubmitFactory:
             print(f"OUTDIR     : {outdir}")
             print("=============================================\n")
 
-            input("Press Enter to submit!")
+            #input("Press Enter to submit!")
 
             print("\n------------------- SUBMIT SETTINGS -------------------\n")
             os.system(f"cat {self.SUBMITDIR}/crab.py")
@@ -500,11 +512,11 @@ class SubmitFactory:
             print("\n----------------------- RUN.SH ------------------------\n")
             os.system(f"cat {self.SUBMITDIR}/run.sh")
 
-            if not self.ARGS["skip_confirm"]:
-                confirmation = input("Do you want to submit? (y/n) ")
-                if confirmation.lower()!="y":
-                    os.system(f"rm -rf {self.SUBMITDIR}")
-                    return
+            #if not self.ARGS["skip_confirm"]:
+            #    confirmation = input("Do you want to submit? (y/n) ")
+            #    if confirmation.lower()!="y":
+            #        os.system(f"rm -rf {self.SUBMITDIR}")
+            #        return
             os.system(f"cd {self.SUBMITDIR}; ./crab_submit.sh")
                 
 if __name__ == "__main__":
